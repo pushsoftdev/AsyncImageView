@@ -1,7 +1,10 @@
 # NetworkImageView
-Asynchronously downloads and loads the image in an UIImageView
+Asynchronously download and load the image in an UIImageView
 
 When we are using lot of UIImageViews which loads images from server, it is hard to write code to manage the downloaded image data and process it. This application uses a Class called NetworkImageView to load the images from the given server URL and reduces the developers effort.
+
+## Feature:
+You don't need to put an UIActivityIndicatorView (loader) during the image is being downloaded. The UIImageView itself has built-in loader.
 
 ## How to use:
 
@@ -12,12 +15,12 @@ You can make use of the loadImage method in two ways.
 
 1. You just tell the NetworkImageView to silently load the image into your UIImageView
 
-####
+###
     imageView.loadImage(withURL: imageURL, completionHandler: nil)
-    
+
 2. You ask the NetworkImageView to download and give the UIImage object to you so that you can handle it.
 
-####
+###
     imageView.loadImage(withURL: imageURL) { (image) in
             // TODO: Handle the downloaded image here
             //self.imageView.image = image
